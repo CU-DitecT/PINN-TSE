@@ -25,15 +25,23 @@ else:
     tf.random.set_seed(1234)
 
 
-para1 = float((sys.argv[1]))  
-para2 = float((sys.argv[2]))
-para3 = float((sys.argv[3]))
-para4 = float((sys.argv[4]))
-para5 = int((sys.argv[5]))
+# para1 = float((sys.argv[1]))  
+# para2 = float((sys.argv[2]))
+# para3 = float((sys.argv[3]))
+# para4 = float((sys.argv[4]))
+# para5 = int((sys.argv[5]))
+
+# para1: weight of the data loss of density (rho)
+# para2: weight of the data loss of velocity (u)
+# para3: weight of the physics loss of desity
+# para4: weight of the physics loss of velocity
+# para5: pre-train length
+para1, para2, para3, para4, para5, para6 = 10, 10, 0, 0, 5000, 16
+
 
 print("parameters:", para1, para2, para3, para4, para5)
 
-with open("./drive/MyDrive/PIDL_FDlearner/US101_Lane1to5_t1.5s30.pickle",'rb') as f:
+with open("US101_Lane1to5_t1.5s30.pickle",'rb') as f:
     data_pickle = pickle.load(f)
 
 Num_of_LOOP = 14
