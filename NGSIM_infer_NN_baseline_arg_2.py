@@ -2,7 +2,7 @@
 
 
 import sys
-sys.path.insert(0, 'Utilities/')
+#sys.path.insert(0, 'Utilities/')
 
 import tensorflow as tf
 import numpy as np
@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 plt.switch_backend('agg')
 import scipy.io
 from scipy.interpolate import griddata
-#from plotting import newfig, savefig
+from plotting import newfig, savefig
 from mpl_toolkits.axes_grid1 import make_axes_locatable
 import matplotlib.gridspec as gridspec
 import time
